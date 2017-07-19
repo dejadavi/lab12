@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html ng-app="lab12">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To Do App</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body ng-controller="ctrl">
+<div class="holder">
+    <div class="letter">W</div>
+    <div class="letter" style="background-color:orange">H</div>
+    <div class="letter">A</div>
+    <div class="letter">T</div>
+    <div class="space">. </div>
+    <div class="letter">D</div>
+    <div class="letter">I</div>
+    <div class="letter" style="background-color:blue">D</div>
+    <div class="space">. </div>
+    <div class="letter">I</div>
+    <div class="space">. </div>
+    <div class="letter" style="background-color:green">L</div>
+    <div class="letter">O</div>
+    <div class="letter">S</div>
+    <div class="letter">E</div>
+    <div class="letter">:</div>
+    <div class="spacec"> .</div>
+    <div class="letter">T</div>
+    <div class="letter">H</div>
+    <div class="letter">E</div>
+    <div class="space"> .</div>
+    <div class="letter">A</div>
+    <div class="letter" style="background-color:red">P</div>
+    <div class="letter" style="background-color:red">P</div>
+    <div class="letter">.</div>
+    <div class="letter">.</div>
+    <div class="letter">.</div>
+    <div class="letter">.</div>
+    <div class="letter">.</div>
+    <div class="letter">?</div>
+    <!-- <label for="task">Task</label> -->
+</div>
+    <div id="container">
+        <input type="text" name="task" ng-model="task" placeholder="Input task">
+        <input type="text" ng-model="myFil" placeholder="Input filter text">
+        <button  class="submit" type="button" ng-click="addTask(task)">Add Task</button>
+    </div>
+
+    <div class="added" ng-hide="hide" ng-repeat="task in tasks |filter: myFil">
+        <span>Task:</span>
+        <span>{{task}}</span>
+        <input id="remove" class="remove" ng-model="hide" type="checkbox">
+        <span class="span-float">Remove: </span>
+</div>
+    <div class="bottom"></div>
+
+
+
+
+
+
+</body>
+
+</html>
