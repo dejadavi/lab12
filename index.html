@@ -56,7 +56,7 @@
         <button  class="submit" type="button" ng-click="addTask(task)">Add Task</button>
     </div>
 
-    <div class="added" ng-hide="hide" ng-repeat="task in tasks |filter: myFil">
+    <div class="added" ng-hide="hide" ng-repeat="task in tasks |filter: myFil track by $index">
         <span>Task:</span>
         <span>{{task}}</span>
         <input id="remove" class="remove" ng-model="hide" type="checkbox">
